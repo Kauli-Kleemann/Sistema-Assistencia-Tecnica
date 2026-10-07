@@ -11,7 +11,7 @@ public class Notebook extends Equipamento {
         if (precisaTrocarTela) {
             return "Tela danificada, precisa de troca";
         }
-        return "Diagnóstico: Bateria viciada ou superaquecimento";
+        return "Bateria viciada ou superaquecimento";
     }
 
     @Override
