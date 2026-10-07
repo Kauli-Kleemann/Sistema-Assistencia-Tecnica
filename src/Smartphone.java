@@ -11,9 +11,17 @@ public class Smartphone extends Equipamento {
         if (temGarantia) {
             return "O equipamento possui garantia";
         } else {
-            "Lentidão e falhas no carregamento";
+            return "Lentidão e falhas no carregamento";
         }
     }
 
-    
+    @Override
+    public double calcularOrcamento() {
+        if (temGarantia) {
+            return 0.0;
+        } else {
+            return 100.0;
+        }
+    }
+
 }
