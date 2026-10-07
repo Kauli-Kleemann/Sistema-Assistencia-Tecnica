@@ -25,4 +25,7 @@ public abstract class Equipamento implements Diagnosticavel {
     public String toString() {
         return getClass().getSimpleName() + " " + getMarca() + " " + getModelo() + " (" + getAnoFabricacao() + ")";
     }
+
+    public abstract double calcularOrcamento();
+    
 }
