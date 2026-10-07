@@ -5,4 +5,15 @@ public class Smartphone extends Equipamento {
         super(marca, modelo, anoFabricacao);
         this.temGarantia = temGarantia;
     }
+
+    @Override
+    public String diagnosticar() {
+        if (temGarantia) {
+            return "O equipamento possui garantia";
+        } else {
+            "Lentidão e falhas no carregamento";
+        }
+    }
+
+    
 }
