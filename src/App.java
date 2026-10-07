@@ -11,12 +11,25 @@ public class App {
         lista.add(new Console("Sony", "PlayStation 3", 2010, 3621));
 
         double total = 0;
+        String equipamentoMaisCaro = "";
+        double valorMaisCaro = -1;
 
         for (Equipamento e : lista) {
             System.out.println(e);
             System.out.println("Diagnóstico: " + e.diagnosticar());
-            System.out.printf("Orçamento: R$ %.2f" + e.calcularOrcamento());
+            System.out.printf("Orçamento: R$ %.2f%n", e.calcularOrcamento());
+
+            if (e.calcularOrcamento() > valorMaisCaro) {
+               valorMaisCaro = e.calcularOrcamento();
+               equipamentoMaisCaro = e.toString();
+            }
+
             total += e.calcularOrcamento();
+
+            System.out.println("\n");
         }
+
+        System.out.printf("Valor total de todos os equipamentos: R$ %.2f%n", total);
+        System.out.println("Equipamento com o orçamento mais alto: " + equipamentoMaisCaro);
     }
 }
