@@ -9,7 +9,7 @@ public class Smartphone extends Equipamento {
     @Override
     public String diagnosticar() {
         if (temGarantia) {
-            return "O equipamento possui garantia";
+            return "Encaminhar para a assistência autorizada";
         } else {
             return "Lentidão e falhas no carregamento";
         }
