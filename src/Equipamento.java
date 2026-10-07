@@ -17,7 +17,12 @@ public abstract class Equipamento implements Diagnosticavel {
         return this.modelo;
     }
 
-    public int anoFabricacao() {
+    public int getAnoFabricacao() {
         return this.anoFabricacao;
+    }
+
+    @Override
+    public String toString() {
+        return getClass().getSimpleName() + " " + getMarca() + " " + getModelo() + " (" + getAnoFabricacao() + ")";
     }
 }
